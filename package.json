@@ -1,0 +1,16 @@
+{
+  "name": "codegen",
+  "version": "1.0.0",
+  "description": "Makes unique code and pin combos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Jacoby",
+  "license": "ISC",
+  "dependencies": {
+    "10": "0.0.1",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0"
+  }
+}
