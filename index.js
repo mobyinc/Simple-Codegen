@@ -38,7 +38,8 @@ function getRandomDigitString(length) {
   let value = '';
 
   for (let i = 0; i < length; i++) {
-    value += getRandomDigit();
+    // no leading zeros, so spreadsheets don't strip them
+    value += i === 0 ? getRandomInt(1, 9) : getRandomDigit();
   }
 
   return value;
@@ -48,6 +49,7 @@ function generateNewCodes() {
   for (var i = 0; i < addCount; i++) {
     let username = generateUniqueCode(6);
     let pin = getRandomDigitString(4);
+    uniqueCodes[username] = pin;
     data.push({
       username,
       pin
